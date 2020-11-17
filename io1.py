@@ -1,12 +1,12 @@
 #open('파일명',모드)
 #사용
 #변수.close() 자원반납
-#모드 : r(읽기),w(쓰기) : 지우고 새로써짐 ,a(추가) : 없으면 만들고 있으면 덧붙이고
+#모드 : r(읽기) : 디폴트 ,w(쓰기) : 지우고 새로써짐 ,a(추가) : 없으면 만들고 있으면 덧붙이고
 
 #f=open('d:\study\pj1\data\les_phares.txt','r',encoding='utf-8')
 # f=open('data/les_phares.txt',encoding='utf-8') #같은 위치에 있어서 파일명만 입력
 # txt=f.read() #전체내용읽기
-# txt=f.read(5) #5글자 읽기
+#txt=f.read(5) #5글자 읽기
 # print(txt)
 # print(type(txt)) #<class 'str'>
 # f.close()
@@ -63,9 +63,16 @@
 # print(type('?'.join(a)))
 
 #이미지저장
-import requests #웹서버에 접근하는 모듈, 설치해야함 file>settings>python interpreter>+표시 클릭
-url='https://shared-comic.pstatic.net/thumb/webtoon/739350/thumbnail/thumbnail_IMAG06_22912ab6-2209-4f31-971d-c0bf191e14d7.jpg'
-recvd=requests.get(url)
-print(recvd) #  <Response [200]> 2xx (성공): 요청을 성공적으로 받았으며 인식했고 수용하였다
-with open('img/webtoon.jpg','wb') as f: #이미지는 이진파일이기때문에 write binary 줄여서 wb라고 써야함
-    f.write(recvd.content)
+# import requests #웹서버에 접근하는 모듈, 설치해야함 file>settings>python interpreter>+표시 클릭
+# url='https://shared-comic.pstatic.net/thumb/webtoon/739350/thumbnail/thumbnail_IMAG06_22912ab6-2209-4f31-971d-c0bf191e14d7.jpg'
+# recvd=requests.get(url)
+# # print(recvd) #  <Response [200]> 2xx (성공): 요청을 성공적으로 받았으며 인식했고 수용하였다
+# with open('img/webtoon.jpg','wb') as f: #이미지는 이진파일이기때문에 write binary 줄여서 wb라고 써야함
+#      f.write(recvd.content)
+
+# import requests
+# url='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbLaXCL%2FbtqAmtAGFET%2Fd2RFW2HLeVboHktC0rHXSK%2Fimg.png'
+# recvd=requests.get(url)
+# print(recvd)
+# with open('img/1.jpg','wb') as f:
+#      f.write(recvd.content)

@@ -10,7 +10,7 @@ import requests
 from bs4 import BeautifulSoup #BeautifulSoup만 가져오기
 #웹페이지에 접근하여 태그인식
 f=open('data/test1.html',encoding='utf-8').read()
-# print(f)
+print(f)
 # BeautifulSoup(웹페이지,파싱방식)
 
 # 파싱(태그를 인식하고 부족한거 채워줌):html.parser,html5lib,lxml(제일빠름)
@@ -54,5 +54,5 @@ thirds=dom.find_all(id='third')
 
 #id가 third인 모든 태그의 첫번째 p태그
 # print(thirds[0])
-p1=thirds[0].find('p')
-print(p1)
+# p1=thirds[0].find('p')
+# print(p1)
