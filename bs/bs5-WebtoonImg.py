@@ -29,10 +29,10 @@ with open('data/webtoon.csv','w',encoding='utf-8') as f:
         for i in range(2,len(trs)):
             # print(trs[i])
             img=trs[i].find('img')['src'] #이미지소스가져오기
+            saveImg(img, title)
 
             td1=trs[i].find('td',class_='title')
             title=td1.find('a').text #제목
-            saveImg(img,title)
             div=trs[i].find('div',class_='rating_type')
             rate=div.find('strong').text #별점
             # print(rate)

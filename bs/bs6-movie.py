@@ -14,9 +14,15 @@ with open('..\\data\\movie.csv','w',encoding='utf-8') as f:
    recvd=requests.get(url)
    dom=BeautifulSoup(recvd.text,'lxml')
    tit=dom.find_all(class_='tit')
-   div=dom.find_all(class_='thumb')
+   div=dom.find_all(class_='thumb') #사진
+   dt=dom.find_all(class_='tit_t1') #개요
    for i in range(len(tit)):
-       title=tit[i].find('a').text
+       title=tit[i].find('a').text #영화제목
+
+
        f.write(title+'\n')
+
+       img=div[i].find('img')['src'] #사진
+       saveImg(img,title)
 
 
