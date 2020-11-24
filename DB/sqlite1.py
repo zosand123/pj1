@@ -50,6 +50,8 @@ while(True):
     if id=="":
         break
     name=input('사용자이름=')
+    if id=="":
+        break
     age=input('사용자나이=')
     email=input('사용자이메일=')
     birthyear=input('사용자 태어난 년도=')
