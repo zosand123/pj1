@@ -71,7 +71,7 @@ class DBManager:
     def __init__(self):
         self.con=cx_Oracle.connect('happy/day@localhost:1521/xe')
         self.cur=self.con.cursor()
-        self.cur.rowfactory = lambda *args: dict(zip([d[0] for d in self.cur.description], args))
+        # self.cur.rowfactory = lambda *args: dict(zip([d[0] for d in self.cur.description], args))
         print('연결성공')
     def __del__(self):
         print('연결해제')
