@@ -44,6 +44,7 @@ def makeContent(pageUrl):
         i=i+1
         contents.append(str(i)+']'+div.text)
     print('{}\n\n조리순서\n{}'.format(title,'\n'.join(contents)))
+
 def main(url):
     recvd=requests.get(url)
     dom=BeautifulSoup(recvd.text,'lxml')
@@ -53,7 +54,9 @@ def main(url):
         # print(pageUrl)
         makeContent(pageUrl)
         break
+
 url='https://www.10000recipe.com/recipe/list.html?q=&query=&cat1=&cat2=&cat3=&cat4=63&fct=&order=reco&lastcate=cat4&dsearch=&copyshot=&scrap=&degree=&portion=&time=&niresource='
+
 if __name__=='__main__':
     main(url)
 
