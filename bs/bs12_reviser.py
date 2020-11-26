@@ -1,4 +1,9 @@
-#제목, 조리순서
+#Traceback (most recent call last):
+#   File "d:/suyeonD/pj1/bs/bs12_reviser.py", line 30, in main
+#     makeContent(pageUrl)
+#   File "d:/suyeonD/pj1/bs/bs12_reviser.py", line 6, in makeContent
+#     with open('../data/recette.txt','w',encoding='utf-8') as f:
+# FileNotFoundError: [Errno 2] No such file or directory: '../data/recette.txt' 선생님께 물어보기!!!!
 import requests
 from bs4 import BeautifulSoup
 
