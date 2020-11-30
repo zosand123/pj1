@@ -17,10 +17,10 @@ import time
 # print('현재페이지소스 : ',driver.page_source)
 # print('현재url : ',driver.current_url)
 # print('title tag : ',driver.title)
-# a=driver.find_element_by_css_selector('body > main > div > div > div:nth-child(9) > h3 > a')
+# a=driver.find_element_by_css_selector('body > main > div > div > div:nth-child(9) > h3 > a')#게시물제목
 # print(a.tag_name)
 # print(a.text)
-# a.click()
+# a.click() #게시물클릭
 
 #search로 들어가서 python검색하기
 # time.sleep(1)
