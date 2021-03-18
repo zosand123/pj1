@@ -134,6 +134,7 @@ for page in range(1,2):
 con.commit()
 con.close()
 
+#0318
 #실행파일만들기 pyinstaller --onefile bs14-car.py
 #자동실행할때는 절!대!경!로!를 써야한다.
 #소스바꾸면 실행파일도 새로만든다!!(다시만들면 덮어씌워짐)
